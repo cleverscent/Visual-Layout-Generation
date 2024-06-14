@@ -1,0 +1,43 @@
+{
+  "process_pptx": false,
+  "input_pptx_folder": "D:/Layout/valid_dataset",
+  "output_json": "D:/layout_cal/dataset/val_canva.json",
+  "image_base_path":"D:/layout_cal/dataset/ppt_images",
+
+
+  "remove_dense_slides": false,
+  "input_json_for_removal": "D:/layout_cal/dataset/val_canva.json",
+  "output_json_after_removal": "D:/layout_cal/dataset/val_canva_40.json",
+
+
+  "process_images_with_clip": false,
+  "input_json_for_clip": "D:/layout_cal/dataset/val_canva.json",
+  "base_path_for_images": "D:/layout_cal/dataset/ppt_images",
+  "ouput_json_after_clip" : "D:/layout_cal/dataset/val_clip.json",
+
+
+  "process_texts": false,
+  "input_json_for_text_encoder": "D:/layout_cal/dataset/train_canva.json",
+  "ouput_json_after_text_encoder" : "D:/layout_cal/dataset/train_dataset/train_text_T5.json",
+
+
+  "cluster_with_image": false,
+  "image_json_path": "D:/layout_cal/dataset/train_clip.json",
+  "clusterd_image_model_path" : "D:/layout_cal/dataset/clustering_with_image_model.pkl",
+
+  "cluster_with_text": false, 
+  "text_json_path": "D:/layout_cal/dataset/train_text.json",
+  "clusterd_text_model_path" : "D:/layout_cal/dataset/clustering_with_text_model.pkl",
+
+  "num_pca_components": 256,
+  "num_clusters": 5,
+  "eps": 10,
+  "min_samples": 100,
+  "clustering_method": "kmeans",
+  
+
+  "Capture_all_slides_in_a_PPT_as_images": true, 
+  "input_folder": "D:/Layout/valid_ppt_dataset",
+  "output_folder": "D:/Layout/valid_ppt_images"
+  
+}
